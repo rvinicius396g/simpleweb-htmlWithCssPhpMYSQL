@@ -3,3 +3,4 @@ To create your Database, u neeed to import the database '127_0_0_1'...
 	inside the database called toystore.
 
 -As I sad that's a very basic site that I mad with a group of my college, using Html, CSS and Php..
+thanks for read everything. !.)
