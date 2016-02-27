@@ -17,7 +17,7 @@
 			
 			.link-cat{font-size:17px; margin-left:12px; color:#4c8af6;}
 			
-			.sidebar{height:700px; padding:20px 0px 0px 20px; background-color:#eeeeee; border-right:1px solid #4c8af6; border-bottom:1px solid #4c8af6;}
+			.sidebar{height:100%; padding:20px 0px 0px 20px; background-color:#eeeeee; border-right:1px solid #4c8af6; border-bottom:1px solid #4c8af6;}
 			
 			.cat-img{width:80%; margin-bottom:20px;}
 			

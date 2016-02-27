@@ -18,7 +18,7 @@
 				<a class="navbar-brand" href="index.php" style="font-size:28px;">TimTimToys.com</a>
 			</div>
 			<div>
-				<ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="myNavbar">
 					<li><a href="index.php" class="opmenu">Home</a></li>
 					<li><a href="category.php" class="opmenu">Categorias</a></li>
 					<li><a href="admin.php" class="opmenu">Administração</a></li>

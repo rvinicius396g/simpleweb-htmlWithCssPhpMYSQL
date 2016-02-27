@@ -19,12 +19,12 @@
 		.tele-numero{font-size:24px; color:#1448ff; font-weight:bold;}
 	</style>-->
 
-<div class="jumbotron slides" style="height:460px; padding:0px; margin-top:10px; margin-bottom:60px; background-color:#b2b0b0;">
+<div class="jumbotron slides" style="height:100%; padding:0px; margin-top:10px; margin-bottom:60px; background-color:#b2b0b0;">
 	<?php
 		include("mycarousel.php");
 	?>
 </div>
-<div class="container-fluid" style="padding-top: 15px;">
+<div class="container-fluid" style="padding-top: 60px;">
 	
 	<div class="row">
 		<div class="col-md-4">
