@@ -9,6 +9,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<style type="text/css">
+			th{
+				background-color:#c92864;
+				color:#ffffff;
+			}
+			th,td{
+				padding:5px;
+			}
 			footer{margin-top:20px;}
 			
 			footer img{margin:10px 20px 0px 20px; height:60px; float:left;}

@@ -1,16 +1,4 @@
-﻿<head>
-	<style>
-		th{
-			background-color:#c92864;
-			color:#ffffff;
-		}
-		th,td{
-			padding:5px;
-		}
-	</style>
-</head>
-
-<form role="form" class="form-inline" method="post" action="admin.php?opcao=listar" style="margin-bottom:20px;">
+﻿<form role="form" class="form-inline" method="post" action="admin.php?opcao=listar" style="margin-bottom:20px;">
 	<input class="form-control" style="width:300px;" type="text" name="palavra" placeholder="O que você procura?" required="required">
 	<input class="btn btn-info" type="submit" name="btnSch" value="Buscar">
 </form>
@@ -55,10 +43,7 @@
 		<h3 style="color:#ce2061;">Produtos Cadastrados</h3>
 		<hr>
 		<table class="table table-bordered">
-			<tr>
-				<th></th>
-			</tr>
-		</table>
+			
 	<?php 
 	//Função LISTAR
 		include('dbcon.php');
