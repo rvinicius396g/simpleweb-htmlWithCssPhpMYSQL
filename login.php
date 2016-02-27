@@ -39,7 +39,7 @@
 						<th>Marca</th>
 						<th>Categoria</th>
 						<th>Preço</th>
-						<th>Controles</th>
+						<th colspan="2">Controles</th>
 					</tr>
 				
 				
@@ -54,6 +54,9 @@
 					<td><?php echo $linha['marca'];?></td>
 					<td><?php echo $linha['categoria'];?></td>
 					<td><?php echo "R$ ".$linha['preco'];?></td>
+					<td><a href="alterar.php?opcao=alterar&codigo=<?php echo $linha["codigo"];?>">Alterar</a></td>
+					<td><a href="excluir.php?opcao=excluir&codigo=<?php echo $linha["codigo"];?>">Excluir</a></td>
+
 				</tr>
 
 				<?php
