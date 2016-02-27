@@ -54,13 +54,11 @@
 ?>
 		<h3 style="color:#ce2061;">Produtos Cadastrados</h3>
 		<hr>
-		<tr>
-			<th>Codigo</th>
-			<th>Nome</th>
-			<th>Marca</th>
-			<th>Categoria</th>
-			<th>Preço</th>
-		</tr>
+		<table class="table table-bordered">
+			<tr>
+				<th></th>
+			</tr>
+		</table>
 	<?php 
 	//Função LISTAR
 		include('dbcon.php');

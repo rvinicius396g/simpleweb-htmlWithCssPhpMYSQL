@@ -58,9 +58,31 @@
 
       		if ($count != 0) {
       			?>
-					
-					<h1>oi</h1>
+
+				<h3>Painel / DashBoard</h3>	
+				<hr/>
+				<table class="table-bordered table-striped">
+					<tr>
+						<th>Cod</th>
+						<th>Nome</th>
+						<th>Marca</th>
+						<th>Categoria</th>
+						<th>Preço</th>
+						<th>Controles</th>
+					</tr>
+				
+				</table>
       			<?php
+      			$res = $conexao->query("SELECT codigo,nome,marca,categoria,preco FROM toys");
+		
+				while($linha = $res->fetch_assoc()){
+				?>
+				<tr>
+					<td>1</td>
+				</tr>
+
+				<?php
+				}
       		}else
       			echo "Senha/Nome está errado!";
       	}

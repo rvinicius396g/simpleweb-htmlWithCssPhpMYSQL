@@ -13,7 +13,7 @@
 			
 			footer p{font-size:15px;	color:#ffffff;}
 			
-			.sidebar{height:800px; padding:20px 0px 0px 20px; background-color:#eeeeee; border-right:1px solid #4c8af6; border-bottom:1px solid #4c8af6;}
+			.sidebar{height:100%; padding:20px 0px 0px 20px; background-color:#eeeeee; border-right:1px solid #4c8af6; border-bottom:1px solid #4c8af6;}
 			
 			.televendas{font-size:21px; color:#ffffff; font-weight:bold;}
 			
@@ -46,11 +46,7 @@
 					<span class="glyphicon glyphicon-menu-right"></span><a href="category.php?cat=pelucias" class="link-cat">Pelúcias</a><br>
 					<span class="glyphicon glyphicon-menu-right"></span><a href="category.php?cat=eletronicos" class="link-cat">Eletrônicos</a><br>
 					<span class="glyphicon glyphicon-menu-right"></span><a href="category.php?cat=jogos" class="link-cat">Jogos</a>
-					
-					<span class="admin"><a href="admin.php" style="color:#0a4fb0;">Administração</a></span><br><br>
-					<span class="glyphicon glyphicon-menu-right"></span><a href="admin.php?opcao=listar" class="opcao">Listar</a><br>
-					<span class="glyphicon glyphicon-menu-right"></span><a href="admin.php?opcao=cadastrar" class="opcao">Cadastrar</a>
-				</div>
+					</div>
 				<div class="col-md-10 text-center" style="padding:30px 40px 0px 80px;">
 					<h3 style="color:#ce2061;">Sobre o Site</h3>
 					<hr>
@@ -71,16 +67,7 @@
 				<?php } ?>
 				</div>	
 		</div>
-		<footer class="row" style="padding:10px 15px 10px 15px; background-color:#6199fd;">
-				<div style="float:left; width: 120px;">
-					<span class="televendas">Televendas</span><br><span class="tele-numero">4002-8922</span>
-				</div>
-				<img src="icons/follow.png">
-				<div style="margin:15px 0px 0px 450px;">
-					<p>Unicid - Rua Cesário Galeno 448/475 Tatuapé - São Paulo - SP CEP 03071-000</p>
-					<p>TimTimToys.com - Trabalho de Programação WEB - HTML, PHP, MySQL e Bootstrap</p>
-				</div>
-			</footer>
+		<?php include("footer.php"); ?>
 		<!-- footer-->
 		</div>
 	</body>
