@@ -10,10 +10,15 @@
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px;">
 		<div class="container-fluid">
 			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>						
+				</button>
 				<a class="navbar-brand" href="index.php" style="font-size:28px;">TimTimToys.com</a>
 			</div>
 			<div>
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right collapse navbar-collapse">
 					<li><a href="index.php" class="opmenu">Home</a></li>
 					<li><a href="category.php" class="opmenu">Categorias</a></li>
 					<li><a href="admin.php" class="opmenu">Administração</a></li>
