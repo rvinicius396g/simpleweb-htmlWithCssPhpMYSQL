@@ -44,7 +44,7 @@
 					<img src="icons/admin.png" style="height:155px; margin-bottom:15px;">
 					<span class="admin"><a href="admin.php" style="color:#0a4fb0;">Administração</a></span><br><br>
 					<span class="glyphicon glyphicon-menu-right"></span><a href="admin.php?opcao=listar" class="opcao">Listar</a><br>
-					<span class="glyphicon glyphicon-menu-right"></span><a href="admin.php?opcao=cadastrar" class="opcao">Cadastrar</a>
+					<span class="glyphicon glyphicon-menu-right"></span><a href="admin.php?opcao=login" class="opcao"><span class="glyphicon glyphicon-user"></span>Login</a>
 				</div>
 				<div class="col-md-10" style="padding: 20px 25px 0px 25px;">
 											
@@ -56,9 +56,7 @@
 						if(isset($_GET['opcao'])){
 							switch($_GET['opcao']){
 								case 'listar':include('listar.php');break;
-								case 'cadastrar':include('cadastrar.php');break;
-								case 'alterar':include('alterar.php');break;
-								case 'excluir':include('excluir.php');break;
+								case 'login':include('login.php');break;
 							}
 						}else{	
 							include("listar.php"); 
@@ -68,16 +66,9 @@
 					
 				</div>
 			</div>
-			<footer class="row" style="padding:10px 15px 10px 15px; background-color:#6199fd;">
-				<div style="float:left; width: 120px;">
-					<span class="televendas">Televendas</span><br><span class="tele-numero">4002-8922</span>
-				</div>
-				<img src="icons/follow.png">
-				<div style="margin:15px 0px 0px 450px;">
-					<p>Unicid - Rua Cesário Galeno 448/475 Tatuapé - São Paulo - SP CEP 03071-000</p>
-					<p>TimTimToys.com - Trabalho de Programação WEB - HTML, PHP, MySQL e Bootstrap</p>
-				</div>
-			</footer>
+			
+				<?php include("footer.php"); ?>
+			
 		</div>
 	</body>
 </html>

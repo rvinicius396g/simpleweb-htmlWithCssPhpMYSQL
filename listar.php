@@ -60,7 +60,6 @@
 			<th>Marca</th>
 			<th>Categoria</th>
 			<th>Preço</th>
-			<th colspan="2">Controles</th>
 		</tr>
 	<?php 
 	//Função LISTAR
@@ -75,8 +74,6 @@
 				<td><?php echo $linha['marca'];?></td>
 				<td><?php echo $linha['categoria'];?></td>
 				<td><?php echo "R$ ".$linha['preco'];?></td>
-				<td><a href="admin.php?opcao=alterar&codigo=<?php echo $linha["codigo"];?>">Alterar</a></td>
-				<td><a href="admin.php?opcao=excluir&codigo=<?php echo $linha["codigo"];?>">Excluir</a></td>
 			</tr>
 <?php
 		}
