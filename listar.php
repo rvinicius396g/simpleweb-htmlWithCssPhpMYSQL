@@ -11,10 +11,8 @@
 </head>
 
 <form role="form" class="form-inline" method="post" action="admin.php?opcao=listar" style="margin-bottom:20px;">
-	<input class="form-control" style="width:300px;" type="text" name="palavra" placeholder="O que você procura?">
+	<input class="form-control" style="width:300px;" type="text" name="palavra" placeholder="O que você procura?" required="required">
 	<input class="btn btn-info" type="submit" name="btnSch" value="Buscar">
-	<label>Nome:</label><input class="form-control" type="radio" name="filtro" value="schnome" checked>
-	<label>Marca:</label><input class="form-control" type="radio" name="filtro" value="schmarca">
 </form>
 
 <table class="table-bordered table-striped">
@@ -29,11 +27,9 @@
 
 			$palavra = $_POST['palavra'];
 			
-			if($_POST['filtro'] == 'schmarca'){
-				$res = $conexao->query("SELECT * FROM toys WHERE marca LIKE '%".$palavra."%' ORDER BY nome");
-			}else{
-				$res = $conexao->query("SELECT * FROM toys WHERE nome LIKE '%".$palavra."%' ORDER BY nome");
-			}
+			
+				$res = $conexao->query("SELECT * FROM toystore.toys WHERE nome LIKE '%$palavra%' ");
+			
 			
 			$count = mysqli_num_rows($res);
 			

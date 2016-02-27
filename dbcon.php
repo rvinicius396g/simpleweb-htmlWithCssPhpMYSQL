@@ -20,7 +20,7 @@
 		echo "Erro: ".mysqli_connect_error();
 		exit();
 	}
-	
+	// Pra não ter problemas de acentuação
 	mysqli_query($conexao,"SET NAMES 'utf8'");
 	mysqli_query($conexao,'SET character_set_connection=utf8');
 	mysqli_query($conexao,'SET character_set_client=utf8');
