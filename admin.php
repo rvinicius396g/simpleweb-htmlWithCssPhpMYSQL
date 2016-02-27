@@ -15,15 +15,15 @@
 			
 			footer p{font-size:15px;	color:#ffffff;}
 			
-			.sidebar{padding:20px 0px 0px 10px; height:600px; border-right:1px solid #4c8af6; border-bottom:1px solid #4c8af6; background-color:#eeeeee;}
+			.sidebar{padding:20px 0px 0px 10px; height:100%; border-right:1px solid #4c8af6; border-bottom:1px solid #4c8af6; background-color:#eeeeee;}
 			
 			.admin{font-size:23px; font-weight:bold; font-family:'Comic Sans MS';}
 			
 			.opcao{margin-left:12px; font-size:17px; color:#4c8af6;}
 			
-			.televendas{font-size:21px; color:#ffffff; font-weight:bold;}
+			/*.televendas{font-size:21px; color:#ffffff; font-weight:bold;}*/
 			
-			.tele-numero{font-size:24px; color:#1448ff; font-weight:bold;}
+			/*.tele-numero{font-size:24px; color:#1448ff; font-weight:bold;}*/
 			
 			.opmenu{font-size:16px; font-weight:bold;}
 		
