@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Nov-2015 às 22:27
--- Versão do servidor: 5.6.17
--- PHP Version: 5.5.12
+-- Generation Time: 28-Fev-2016 às 16:05
+-- Versão do servidor: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,14 +14,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `toystore`
 --
-DROP DATABASE `toystore`;
-CREATE DATABASE IF NOT EXISTS `toystore` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `toystore`;
 
 -- --------------------------------------------------------
 
@@ -29,8 +26,7 @@ USE `toystore`;
 -- Estrutura da tabela `about`
 --
 
-DROP TABLE IF EXISTS `about`;
-CREATE TABLE IF NOT EXISTS `about` (
+CREATE TABLE `about` (
   `rgm` int(8) NOT NULL COMMENT 'Apenas numeros',
   `nome` varchar(50) NOT NULL,
   `imagem` varchar(50) NOT NULL
@@ -54,9 +50,8 @@ INSERT INTO `about` (`rgm`, `nome`, `imagem`) VALUES
 -- Estrutura da tabela `toys`
 --
 
-DROP TABLE IF EXISTS `toys`;
-CREATE TABLE IF NOT EXISTS `toys` (
-  `codigo` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `toys` (
+  `codigo` int(10) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `marca` varchar(30) NOT NULL,
   `categoria` varchar(30) NOT NULL,
@@ -64,17 +59,15 @@ CREATE TABLE IF NOT EXISTS `toys` (
   `descricao` varchar(120) NOT NULL COMMENT 'max. 50 caracteres',
   `detalhe` varchar(600) NOT NULL COMMENT 'max. 600 caracteres',
   `imagem` varchar(200) NOT NULL,
-  `publico` varchar(5) NOT NULL,
-  PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+  `publico` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `toys`
 --
 
 INSERT INTO `toys` (`codigo`, `nome`, `marca`, `categoria`, `preco`, `descricao`, `detalhe`, `imagem`, `publico`) VALUES
-(1, 'Boneca Draculaura Assombrada', 'Mattel', 'Bonecas', 89.90, 'Boneca Monster High - Draculaura - Mattel', 'É mesmo de arrepiar quando as monstrinhas de Monster High se aventuram em Haunted High, no mundo dos espíritos, para salvar sua amiga Spectra Vondergeist no filme Monster High: Assombrada.\r\nAs bonecas também vêm com um suporte translúcido em formato de corrente que faz as nossas fanstasminhas parecerem flutuar, além de um lindo pente.', 'monster.jpg', 'girl'),
-(2, 'Boneca Barbie Salva Vidas', 'Mattel', 'Bonecas', 59.90, 'Boneca Barbie - Salva-vidas - Mattel', 'Esta Barbie da linha profissões está pronta para alcançar seu sonho de se tornar uma salva vidas! Com um maiô e acessórios de salva vidas, ela está pronta para passar o dia na praia protegendo os banhistas!', 'barbie.jpg', 'girl'),
+(2, 'Boneca Barbie Salva Vidas Promo', 'Mattel', 'Bonecas', 59.90, 'Boneca Barbie - Salva-vidas - Mattel', 'Esta Barbie da linha profissões está pronta para alcançar seu sonho de se tornar uma salva vidas! Com um maiô e acessórios de salva vidas, ela está pronta para passar o dia na praia protegendo os banhistas!', 'barbie.jpg', 'girl'),
 (3, 'Pelúcia Divertida Mente - Alegria', 'Sunny', 'Pelucias', 179.99, 'Pelúcia Luxo com Som - Alegria 15cm - Sunny', 'Divertida Mente é animação que está fazendo maior sucesso nas telinhas. Pensando nisso, que a Sunny Brinquedos traz para você essa maravilhosa Pelúcia Divertida Mente. Fabricado com excelente material, a pelúcia irá divertir toda sua família, além disso, possui componentes eletrônicos, ou seja, basta apertar o local indicado que você conseguirá ouvir os sons, além de ser super fofinha! Escolha o personagem que mais combina com você e que a diversão comece! ', 'insideout.jpg', 'famy'),
 (4, 'Laptop Frozen', 'Candide', 'Eletronicos', 145.90, 'Laptop Infantil - Frozen - Candide', 'As crianças estão se conectando cada vez mais cedo com as novas tecnologias e para alinhar isso com o aprendizado, a Candide desenvolveu o Laptop Infantil. Com a temática do filme Frozen, ele possui 30 atividades interativas de português, matemática, lógica e jogos.', 'pcfrozen.jpg', 'girl'),
 (5, 'Pelúcia Peppa Pig', 'Candide', 'Pelucias', 79.90, 'Pelúcia Peppa Pig - Candide', 'Todas as crianças adoram os personagens do desenho Peppa, e agora elas poderão brincar com eles em qualquer lugar.\r\nSeus filhos vão adorar criar novas cenas de aventura e diversão com suas figuras prediletas. A Peppa, porquinha mais linda de todas, está charmosa com seu vestido vermelho e sapatinhos fashions.', 'peppa.jpg', 'girl'),
@@ -98,6 +91,43 @@ INSERT INTO `toys` (`codigo`, `nome`, `marca`, `categoria`, `preco`, `descricao`
 (23, 'Veículo Batman', 'Candide', 'Eletronicos', 89.99, 'Veículo de Ação Batman com Três Funções - Candide', 'Com o Veículo de Ação do Batman com rádio controle de 3 funções eles vão se divertir por horas e levar ao último estágio, o verbo: brincar. É mais quem um simples carro, ou um mero veículo. É um grande entretenimento no que se refere a brinquedos de aventura. Seu filho e o Batman, o grande super herói do momento vão fazer entreter a garotada de todas as maneiras e possibilidades. O brinquedo utiliza 4 pilhas AA no carro e uma bateria 9V no controle.', 'batman.jpg', ''),
 (27, 'Relógio Ben 10', 'Sunny', 'Eletronicos', 98.83, 'Relógio Ben 10 Omnitrix - Sunny', 'Esse Omnitrix possui efeito sonoro, luzes e 10 posições de alienígenas em um disco giratório para escolher o melhor alien Ben 10 para começar a brincadeira feito um herói. Os monstros galácticos brilham no escuro.', 'ben10.jpg', '');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `user`
+--
+
+CREATE TABLE `user` (
+  `nome` varchar(250) NOT NULL,
+  `senha` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `user`
+--
+
+INSERT INTO `user` (`nome`, `senha`) VALUES
+('rvinicius396g', '211297');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `toys`
+--
+ALTER TABLE `toys`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `toys`
+--
+ALTER TABLE `toys`
+  MODIFY `codigo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

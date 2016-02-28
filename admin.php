@@ -64,6 +64,7 @@
 							switch($_GET['opcao']){
 								case 'listar':include('listar.php');break;
 								case 'login':include('login.php');break;
+								case 'cadastrar':include('cadastrar.php');break;
 							}
 						}else{	
 							include("listar.php"); 

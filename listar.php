@@ -61,7 +61,7 @@
 <?php
 		}
 ?>		
-		<a href="admin.php?opcao=cadastrar" role="button" class="btn btn-info" style="margin-bottom:15px; margin-right:20px;">Cadastrar Novo</a>
+		<!-- <a href="admin.php?opcao=cadastrar" role="button" class="btn btn-info" style="margin-bottom:15px; margin-right:20px;">Cadastrar Novo</a> -->
 <?php
 		if(isset($_POST['btnAlt'])){
 			echo "<span style='font-size:18px;'>* Dados alterados com sucesso!</span>";

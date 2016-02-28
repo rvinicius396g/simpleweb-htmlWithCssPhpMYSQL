@@ -24,12 +24,12 @@
       		$nome = $_POST['bnome'];
       		$senha = $_POST['bsenha'];
 
-      		$res = $conexao->query("SELECT * FROM toystore.user WHERE nome = '$nome' AND senha = '$senha' ");
+      		$res = $conexao->query("SELECT * FROM user WHERE nome = '$nome' AND senha = '$senha' ");
       		$count = mysqli_num_rows($res);
 
       		if ($count != 0) {
       			?>
-
+				<a href="admin.php?opcao=cadastrar" role="button" class="btn btn-info" style="margin-bottom:15px; margin-right:20px;">Cadastrar Novo</a>
 				<h3>Painel / DashBoard</h3>	
 				<hr/>
 				<table class="table-bordered table-striped">
